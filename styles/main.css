@@ -6,7 +6,7 @@
 }
 
 .Main h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 50px;
   font-weight: 300;
   text-align: center;
@@ -21,10 +21,11 @@
 .Main .text-container {
   display: flex;
   margin: 10px 20%;
+  margin-bottom: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 300;
   text-align: center;
@@ -35,6 +36,11 @@
   font-size: 40px;
 }
 
+@media screen and (max-width: 600px) {
+  .Main .text-container > p {
+    font-size: 20px;
+  }
+}
 #introduction-wrapper {
   display: flex;
   flex-direction: column;
@@ -112,7 +118,8 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card h2, .card p {
+.card h2,
+.card p {
   margin-bottom: 10px;
 }
 .card h3 {
@@ -122,7 +129,7 @@
 .card h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1C1D1F;
+  color: #1c1d1f;
   padding-bottom: 15px;
 }
 .card:hover {
@@ -130,6 +137,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -146,7 +158,7 @@ header {
   align-items: center;
   padding: 0 1rem;
   height: 3rem;
-  background: linear-gradient(90deg, #F5F7FA, #B8C6DB);
+  background: linear-gradient(90deg, #f5f7fa, #b8c6db);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -154,7 +166,7 @@ header {
 .nav-container .logo a {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1C1D1F;
+  color: #1c1d1f;
   text-decoration: none !important;
 }
 
@@ -173,7 +185,7 @@ header {
 .nav-line {
   height: 3px;
   width: 100%;
-  background-color: #1C1D1F;
+  background-color: #1c1d1f;
   box-shadow: #000000 0 0 3px;
 }
 
@@ -207,7 +219,7 @@ header {
     width: 2em;
     height: 3px;
     border-radius: 3px;
-    background-color: #1C1D1F;
+    background-color: #1c1d1f;
     margin-top: 8px;
     transition: all 0.3s ease-in-out;
   }
@@ -286,7 +298,7 @@ header {
 }
 #moon-par img + .moon-text {
   opacity: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #606060;
   padding: 10px;
   margin-top: 20px;
@@ -327,7 +339,7 @@ header {
   transition: all 0.3s;
   padding: 10px;
   font-family: Roboto, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .SpaceBtn:hover {
   background-color: #eee;
@@ -361,40 +373,40 @@ ul > li {
 .mercury {
   width: 30px;
   height: 30px;
-  background-color: #CBCBFD;
+  background-color: #cbcbfd;
 }
 
 .venus {
   width: 40px;
   height: 40px;
-  background-color: #FF761D;
+  background-color: #ff761d;
 }
 
 .earth {
   width: 50px;
   height: 50px;
-  background-color: #3454DF;
+  background-color: #3454df;
   margin-right: 30px;
 }
 
 .mars {
   width: 50px;
   height: 50px;
-  background-color: #E50001;
+  background-color: #e50001;
   margin-right: 15px;
 }
 
 .jupiter {
   width: 130px;
   height: 130px;
-  background: repeating-linear-gradient(180deg, #C1844D, #C1844D 10px, #754627 10px, #754627 20px);
+  background: repeating-linear-gradient(180deg, #c1844d, #c1844d 10px, #754627 10px, #754627 20px);
   margin-right: 20px;
 }
 
 .saturn {
   width: 80px;
   height: 80px;
-  background-color: #F9DBB7;
+  background-color: #f9dbb7;
   margin-right: 20px;
 }
 
@@ -412,21 +424,21 @@ ul > li {
 .uranus {
   width: 70px;
   height: 70px;
-  background-color: #7BDEFC;
+  background-color: #7bdefc;
   margin-right: 50px;
 }
 
 .neptune {
   width: 70px;
   height: 70px;
-  background-color: #537CFE;
+  background-color: #537cfe;
   margin-right: 30px;
 }
 
 .pluto {
   width: 15px;
   height: 15px;
-  background-color: #E9E8D2;
+  background-color: #e9e8d2;
 }
 
 @media screen and (max-width: 860px) {
@@ -436,4 +448,32 @@ ul > li {
   #introduction-wrapper h1 {
     font-size: 2.5rem;
   }
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "about-us about-us links contact";
+}
+
+.about-us {
+  grid-area: about-us;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.about-us h3 {
+  font-size: 1.5rem;
+  color: #606060;
+}
+
+.links {
+  grid-area: links;
+}
+
+.contact {
+  grid-area: contact;
 }/*# sourceMappingURL=main.css.map */
