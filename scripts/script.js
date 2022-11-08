@@ -6,3 +6,8 @@ for (let i = 0; i < bg.length; i++){
         bg[i].style.transform = 'translate(-' + x * 10 + 'px, -' + y * 10 + 'px)';
     });    
 }
+
+
+function goTo(href){
+    window.location.href = href;
+}

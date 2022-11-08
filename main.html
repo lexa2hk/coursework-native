@@ -11,8 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/23dd47c5b3.js" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <title>GANGRATUA</title>
   </head>
   <body>
     <header>
@@ -24,10 +25,10 @@
           <div class="nav-links">
             <ul>
               <li>
-                <a href="/">Исследовать</a>
+                <a href="#main-text">Исследовать</a>
               </li>
               <li>
-                <a href="/">Главная</a>
+                <a href="#introduction-wrapper">Главная</a>
               </li>
               <li>
                 <a href="/about">О нас</a>
@@ -61,14 +62,14 @@
         <div id="introduction-wrapper">
             <h1>GANGRATUA SPACE Project</h1>
         </div>
-        <div id="container-system" class="centered">
+        <!-- <div id="container-system" class="centered">
             <ul class="centered">
                <!-- <li> 
                  <div class="planet mercury"></div>
                </li>
                 <li>
                  <div class="planet venus"> </div>
-               </li> -->
+               </li>
                <li>
                  <div class="planet earth"> </div>
                </li>
@@ -91,16 +92,24 @@
                  <div class="planet pluto"> </div>
                </li>
              </ul>
-         </div>
+         </div> -->
         
 
-        <div id="moon-par" class="mouse-parallax-bg">
+        <div class="el-par mouse-parallax-bg">
             <img src="/images/moon.png" alt="">
 
             <div class="moon-text"><p>Лунные аппараты</p></div>
+            
         </div>
 
-        <div class="text-container">
+        <div id="voyager-par" class="el-par mouse-parallax-bg">
+          <img src="/images/VoyagerBg.png" alt="">
+
+          <div class="moon-text"><p>Далекий космос</p></div>
+          
+      </div>
+
+        <div class="text-container" id="main-text">
           <p>
             Наша команда занимается популяризацией космоса. На данном этапе
             развития человечества "под ногами" все найдено и исследовано,
@@ -123,7 +132,10 @@
               1957 года. Спутник был запущен в качестве первого эксперимента по
               изучению космического пространства.
             </p>
-            <button class="SpaceBtn">Подробнее</button>
+            <a href="/near-earth.html">
+              <button class="SpaceBtn">Подробнее</button>
+            </a>
+            
           </div>
 
           <p>
@@ -138,8 +150,15 @@
             <p>
               Первый Полет в космос с человеком на борту, 12 апреля 1961 года.
             </p>
-            <button class="SpaceBtn">Подробнее</button>
+            <a href="/near-earth.html">
+              <button class="SpaceBtn">Подробнее</button>
+            </a>
           </div>
+
+          <p>С тех пор в бескрайние пространства было запущено множество летательных аппаратов: от спутников GPS
+            до международной космической станции и Вояджеров. Каждый из этих аппаратов имеет свою историю и предназначение.
+            Ознакомиться с некоторыми из них вы можете на данном сайте. 
+          </p> <br>
 
         </div>
       </section>
@@ -148,13 +167,24 @@
     <footer>
         <div class="footer-container">
             <div class="about-us">
-                <h3>ABOUT US</h3>
+                <h3>О нас</h3>
+                <p>GANGRATUA SPACE - нескучный космический журнал о летательных аппаратах</p>
             </div>
             <div class="links">
-                <h3>LINKS</h3>
+                <h3>Ссылки</h3>
+                <ul>
+                  <li><a href="#introduction-wrapper">Главная</a> </li><br>
+                  <li>Лунные аппараты</li><br>
+                  <li><a href="/near-earth.html">Околоземные аппараты</a> </li><br>
+                  <li>Далекий космос</li><br>
+                  <li>Контакты</li><br>
+                </ul>
             </div>
             <div class="contact">
-                <h3>Contact</h3>
+                <h3>Контакты</h3>
+                <p>Автор: Смольников Алексей Борисович</p>
+                <p><strong>ИКБО-10-21</strong>, курсовая работа</p>
+                <p><i class="fa-brands fa-telegram"></i> <a href="https://t.me/lexa2hk" class="tg-link">lexa2hk</a></p>
             </div>
           </div>
     </footer>
