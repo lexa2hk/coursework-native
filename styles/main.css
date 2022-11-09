@@ -105,16 +105,20 @@ html {
 .card {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
   margin: 10px 10px;
   padding-bottom: 10px;
   width: 400px;
+  height: 600px;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   background-color: rgba(255, 239, 239, 0.66);
   border-radius: 12px;
   overflow: hidden;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
 }
 .card img {
   width: 100%;
@@ -365,7 +369,7 @@ header {
   }
 }
 .SpaceBtn {
-  height: 100%;
+  height: 50px;
   background-color: rgba(14, 20, 148, 0.4235294118);
   border-radius: 10px;
   border: 0px;
@@ -484,6 +488,7 @@ ul > li {
   }
 }
 .footer-container {
+  z-index: 101;
   font-size: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -591,7 +596,33 @@ ul > li {
   }
 }
 .article-sect {
+  margin-top: 20px;
   border: #000 1px solid;
   border-radius: 15px;
   padding: 20px;
+}
+
+.goUp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+.goUp img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 580px) {
+  .goUp {
+    right: 5px;
+  }
+}
+.article-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
