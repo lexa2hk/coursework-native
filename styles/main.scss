@@ -4,12 +4,18 @@ $secondary-color: #0e14946c;
 $custom-gray: #3a3a3a;
 $cream-gray: #c9c9c9;
 
+//$star-bg-url: '/images/star-bg.jpg';
+$star-bg-url: 'https://i.imgur.com/Q8RR2Rk.jpeg';
+
+//$mars-texture-url: '/images/mars-texture.jpg';
+$mars-texture-url: 'https://i.imgur.com/pumQTeA.jpeg';
+
 html {
   scroll-behavior: smooth;
 }
 
 .Main {
-  background-image: url(/images/star-bg.jpg);
+  background-image: url($star-bg-url);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -47,7 +53,7 @@ html {
   font-size: 40px;
 }
 
-@media screen and(max-width: 600px) {
+@media screen and (max-width: 600px) {
   .Main .text-container > p {
     font-size: 20px;
   }
@@ -785,7 +791,7 @@ ul > li {
 }
 @keyframes rotate {
   0% {
-    transform: rotate3d(0 0, 0, 360deg);
+    transform: rotate3d(0, 0, 0, 360deg);
   }
   100% {
     transform: rotate3d(0, 1, 0, 360deg);
@@ -860,7 +866,7 @@ ul > li {
   top: 80px;
 }
 .mars .face {
-  background-image: url("/images/mars-texture.jpg");
+  background-image: url($mars-texture-url);
 }
 .mars .clip-circle {
   transform: rotateX(7deg) rotateZ(15deg);
