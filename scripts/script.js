@@ -9,7 +9,7 @@ for (let i = 0; i < bg.length; i++){
 
 
 function goTo(href){
-    window.location.href = 'http://127.0.0.1:5500/' + href;
+    window.location.href =  href;
 }
 
 
