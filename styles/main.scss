@@ -365,12 +365,13 @@ header {
     }
   }
 
-  & img:hover + .moon-text {
+  & img:hover ~ .moon-text {
     display: block;
     opacity: 1;
     transition: all 0.3s ease-in-out;
   }
 }
+
 
 #voyager-par {
   align-items: center;
