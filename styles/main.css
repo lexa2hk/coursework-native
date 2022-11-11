@@ -420,20 +420,6 @@ ul > li {
   background-color: #ff761d;
 }
 
-.earth {
-  width: 50px;
-  height: 50px;
-  background-color: #3454df;
-  margin-right: 30px;
-}
-
-.mars {
-  width: 50px;
-  height: 50px;
-  background-color: #e50001;
-  margin-right: 15px;
-}
-
 .jupiter {
   width: 130px;
   height: 130px;
@@ -601,6 +587,11 @@ ul > li {
   border-radius: 15px;
   padding: 20px;
 }
+.article-sect--mars {
+  margin: 20px;
+  background-color: #e5e5e5;
+  font-size: 24px;
+}
 
 .goUp {
   position: fixed;
@@ -625,4 +616,221 @@ ul > li {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.ObjContainer {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 500px 1fr;
+  grid-template-areas: "mars header" "articleText articleText";
+}
+
+@media screen and (max-width: 1030px) {
+  .ObjContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 160px 1fr;
+    grid-template-areas: "mars" "header" "articleText";
+  }
+  .mars {
+    left: calc(50% - 200px) !important;
+  }
+}
+@media screen and (max-width: 533px) {
+  .marsArticleText {
+    margin: 0 0 !important;
+    font-size: 2rem !important;
+    text-align: left !important;
+  }
+  .ObjContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 160px 1fr;
+    grid-template-areas: "mars" "header" "articleText";
+  }
+  .mars {
+    left: calc(50% - 100px) !important;
+    transform: scale(0.5);
+  }
+  .header-text h1 {
+    font-size: 5rem !important;
+  }
+}
+.header-text {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 20px;
+}
+.header-text h1 {
+  font-size: 10rem;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+
+.marsArticleText {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  grid-area: articleText;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: justify;
+  padding: 20px;
+  margin: 0 30px;
+  text-indent: 20px;
+}
+.marsArticleText ul {
+  text-indent: 0;
+}
+.marsArticleText ul li {
+  text-indent: 20px;
+}
+
+.cube-wrapper {
+  width: 0;
+  height: 0;
+  top: 100px;
+  left: 190px;
+  position: absolute;
+  perspective-origin: 0 0;
+  perspective: 80px;
+}
+
+.cube-2 {
+  transform: translateZ(-100px) scaleX(3.8);
+  transform-style: preserve-3d;
+}
+
+.cube {
+  top: -100px;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate3d(0 0, 0, 360deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0 0, 0, 360deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+.face {
+  position: absolute;
+  background-size: 662.4px 400px;
+  width: 85px;
+  height: 402px;
+}
+
+#face1 {
+  transform: translateX(-41.4px) translateZ(100px);
+  background-position: 0 0;
+}
+
+#face2 {
+  transform: translateX(29.2px) translateZ(70.8px) rotateY(45deg);
+  background-position: -82.8px 0;
+}
+
+#face3 {
+  transform: translateX(58.5px) rotateY(90deg);
+  background-position: -165.6px 0;
+}
+
+#face4 {
+  transform: translateX(29.2px) translateZ(-70.8px) rotateY(135deg);
+  background-position: -248.4px 0;
+}
+
+#face5 {
+  transform: translateX(-41.4px) translateZ(-100px) rotateY(180deg);
+  background-position: -331.2px 0;
+}
+
+#face6 {
+  transform: translateX(-111.4px) translateZ(-70.8px) rotateY(225deg);
+  background-position: -414px 0;
+}
+
+#face7 {
+  transform: translateX(-141.4px) rotateY(270deg);
+  background-position: -496.8px 0;
+}
+
+#face8 {
+  transform: translateX(-111.4px) translateZ(70px) rotateY(315deg);
+  background-position: -579.6px 0;
+}
+
+.circle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+.clip-circle {
+  position: absolute;
+  padding: 0;
+  top: 0px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  -webkit-clip-path: circle(198px at center);
+          clip-path: circle(198px at center);
+}
+
+.lighting:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 67px;
+}
+
+.mars {
+  position: absolute;
+  left: 40px;
+  top: 80px;
+}
+
+.mars .face {
+  background-image: url("/images/mars-texture.jpg");
+}
+
+.mars .clip-circle {
+  transform: rotateX(7deg) rotateZ(15deg);
+}
+
+.mars .lighting {
+  box-shadow: -20px -30px 55px 0 rgba(0, 0, 0, 0.9) inset, -75px -100px 150px 0 rgba(0, 0, 0, 0.4) inset, 75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
+}
+
+.mars .lighting:after {
+  box-shadow: 0 0 150px 51px rgba(255, 255, 255, 0.2), 0 0 26px 10px rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=main.css.map */
