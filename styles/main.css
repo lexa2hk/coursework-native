@@ -4,8 +4,6 @@ html {
 
 .Main {
   background-image: url("https://i.imgur.com/Q8RR2Rk.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
 }
 
@@ -536,8 +534,9 @@ ul > li {
 }
 
 .article-image {
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
+  max-height: 820px;
   object-fit: cover;
   float: right;
   margin: 10px;
@@ -609,10 +608,30 @@ ul > li {
     left: calc(50% - 200px) !important;
   }
 }
-@media screen and (max-width: 533px) {
+.mars--mobile {
+  display: none;
+}
+.mars--mobile img {
+  width: 80vw;
+  height: 80vw;
+}
+
+@media screen and (max-width: 650px) {
+  .mars {
+    display: none;
+  }
+  .mars--mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mars--mobile img {
+    margin-top: 15vh;
+  }
   .marsArticleText {
+    padding: 3px !important;
     margin: 0 0 !important;
-    font-size: 2rem !important;
+    font-size: 4.5vw !important;
     text-align: left !important;
   }
   .ObjContainer {
@@ -626,6 +645,9 @@ ul > li {
   }
   .header-text h1 {
     font-size: 5rem !important;
+  }
+  .article-sect--mars {
+    font-size: 4.5vw !important;
   }
 }
 .header-text {
@@ -793,6 +815,31 @@ ul > li {
 
 .mars .lighting:after {
   box-shadow: 0 0 150px 51px rgba(255, 255, 255, 0.2), 0 0 26px 10px rgba(255, 255, 255, 0.2);
+}
+
+#ingenuity-label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ingenuity-label img {
+  width: 70%;
+  max-width: 800px;
+}
+#ingenuity-label #ingentity-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  font-weight: 200;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=main.css.map */

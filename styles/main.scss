@@ -16,8 +16,8 @@ html {
 
 .Main {
   background-image: url($star-bg-url);
-  background-size: cover;
-  background-repeat: no-repeat;
+  //background-size: cover;
+  //background-repeat: no-repeat;
   background-position: center center;
 }
 
@@ -124,15 +124,18 @@ html {
     height: 50%;
     object-fit: cover;
   }
+
   & h2,
   p {
     margin-bottom: 10px;
   }
+
   & h3 {
     // font-size: 1rem;
     font-weight: 100;
     color: #484848;
   }
+
   & h2 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -196,6 +199,7 @@ header {
         background: $base-color;
         transition: width 0.3s;
       }
+
       &::after {
         content: "";
         display: block;
@@ -204,6 +208,7 @@ header {
         background: $base-color;
         transition: height 0.3s;
       }
+
       &:hover::after {
         height: 100%;
         transition: height 0.3s;
@@ -232,6 +237,7 @@ header {
 #toggle {
   display: none;
 }
+
 .burger-menu {
   display: none;
 }
@@ -411,6 +417,7 @@ header {
     background-color: #eee;
     transform: scale(1.05);
   }
+
   &.active {
     background-color: #eee;
   }
@@ -566,23 +573,28 @@ ul > li {
   justify-content: center;
   align-items: center;
   padding: 20px;
+
   & h3 {
     font-size: 1.5rem;
   }
 }
+
 .links {
   grid-area: links;
   display: block;
   margin-bottom: 10px;
+
   & ul li {
     list-style: none;
     padding: 5px;
+
     & a {
       text-decoration: none;
       color: $base-color-light;
     }
   }
 }
+
 .contact {
   grid-area: contact;
   text-align: center;
@@ -605,6 +617,7 @@ ul > li {
   text-align: justify;
   color: $base-color;
   margin: 0 10%;
+
   & p {
     font-size: 24px;
   }
@@ -616,8 +629,9 @@ ul > li {
 }
 
 .article-image {
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
+  max-height: 820px;
   object-fit: cover;
   float: right;
   margin: 10px;
@@ -700,10 +714,38 @@ ul > li {
   }
 }
 
-@media screen and (max-width: 533px) {
+.mars--mobile {
+  display: none;
+
+  & img {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .mars {
+    display: none;
+
+    &--mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        margin-top: 15vh;
+      }
+
+    }
+  }
+
   .marsArticleText {
+    padding: 3px !important;
     margin: 0 0 !important;
-    font-size: 2rem !important;
+    //width: 100vw;
+    //font-size: 30px !important;
+    font-size: 4.5vw !important;
     text-align: left !important;
   }
 
@@ -721,6 +763,10 @@ ul > li {
   .header-text h1 {
     font-size: 5rem !important;
   }
+
+  .article-sect--mars {
+    font-size: 4.5vw !important;
+  }
 }
 
 .header-text {
@@ -734,6 +780,7 @@ ul > li {
   font-weight: 400;
   text-align: center;
   padding: 0 20px;
+
   & h1 {
     font-size: 10rem;
     font-weight: 200;
@@ -776,10 +823,12 @@ ul > li {
   perspective-origin: 0 0;
   perspective: 80px;
 }
+
 .cube-2 {
   transform: translateZ(-100px) scaleX(3.8);
   transform-style: preserve-3d;
 }
+
 .cube {
   top: -100px;
   position: relative;
@@ -789,6 +838,7 @@ ul > li {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 @keyframes rotate {
   0% {
     transform: rotate3d(0, 0, 0, 360deg);
@@ -809,30 +859,37 @@ ul > li {
   transform: translateX(-41.4px) translateZ(100px);
   background-position: 0 0;
 }
+
 #face2 {
   transform: translateX(29.2px) translateZ(70.8px) rotateY(45deg);
   background-position: -82.8px 0;
 }
+
 #face3 {
   transform: translateX(58.5px) rotateY(90deg);
   background-position: -165.6px 0;
 }
+
 #face4 {
   transform: translateX(29.2px) translateZ(-70.8px) rotateY(135deg);
   background-position: -248.4px 0;
 }
+
 #face5 {
   transform: translateX(-41.4px) translateZ(-100px) rotateY(180deg);
   background-position: -331.2px 0;
 }
+
 #face6 {
   transform: translateX(-111.4px) translateZ(-70.8px) rotateY(225deg);
   background-position: -414px 0;
 }
+
 #face7 {
   transform: translateX(-141.4px) rotateY(270deg);
   background-position: -496.8px 0;
 }
+
 #face8 {
   transform: translateX(-111.4px) translateZ(70px) rotateY(315deg);
   background-position: -579.6px 0;
@@ -844,6 +901,7 @@ ul > li {
   height: 400px;
   border-radius: 50%;
 }
+
 .clip-circle {
   position: absolute;
   padding: 0;
@@ -853,6 +911,7 @@ ul > li {
   border-radius: 50%;
   clip-path: circle(198px at center);
 }
+
 .lighting:after {
   content: "";
   position: absolute;
@@ -865,16 +924,48 @@ ul > li {
   left: 40px;
   top: 80px;
 }
+
 .mars .face {
   background-image: url($mars-texture-url);
 }
+
 .mars .clip-circle {
   transform: rotateX(7deg) rotateZ(15deg);
 }
+
 .mars .lighting {
   box-shadow: -20px -30px 55px 0 rgba(0, 0, 0, 0.9) inset, -75px -100px 150px 0 rgba(0, 0, 0, 0.4) inset,
-    75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
+  75px 100px 200px 0 rgba(255, 255, 255, 0.2) inset, -1px -2px 10px 2px rgba(200, 190, 255, 0.2);
 }
+
 .mars .lighting:after {
   box-shadow: 0 0 150px 51px rgba(255, 255, 255, 0.2), 0 0 26px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+#ingenuity-label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 70%;
+    max-width: 800px;
+  }
+
+  & #ingentity-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
 }

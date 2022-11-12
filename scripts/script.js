@@ -61,3 +61,10 @@ function imageFullScreen(el){
         blur.remove();
     });
 }
+
+
+function uncheckBurger(){
+    let toggle = document.getElementById('toggle');
+    console.log("toggle state "+ toggle.checked);
+    toggle.checked = false;
+}
