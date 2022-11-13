@@ -68,3 +68,12 @@ function uncheckBurger(){
     console.log("toggle state "+ toggle.checked);
     toggle.checked = false;
 }
+
+function switchISS3dState(){
+    let iss3d = document.getElementById('iss-3d');
+    if(iss3d.style.display === 'block'){
+        iss3d.style.display = 'none';
+    }else{
+        iss3d.style.display = 'block';
+    }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -542,6 +543,12 @@ ul > li {
   margin: 10px;
 }
 
+#lagrange-scheme {
+  width: 90%;
+  height: 90%;
+  max-width: 500px;
+}
+
 @media screen and (max-width: 1000px) {
   .article-image {
     width: 100%;
@@ -560,7 +567,7 @@ ul > li {
   border-radius: 15px;
   padding: 20px;
 }
-.article-sect--mars {
+.article-sect--mars, .article-sect--deep {
   margin: 20px;
   background-color: #e5e5e5;
   font-size: 24px;
@@ -646,7 +653,7 @@ ul > li {
   .header-text h1 {
     font-size: 5rem !important;
   }
-  .article-sect--mars {
+  .article-sect--mars, .article-sect--deep {
     font-size: 4.5vw !important;
   }
 }
@@ -840,6 +847,116 @@ ul > li {
   font-weight: 200;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.vg-video-container {
+  height: 50vh;
+  width: 100vw;
+  position: relative;
+}
+
+.vg-video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.vg-video-container .vg-caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-size: 6vw;
+  color: #ffffff;
+  padding: 10px;
+}
+.vg-video-container .vg-caption h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  margin-top: 15vh;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.center-item {
+  margin: 0 auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.no-float-center {
+  margin: 0 auto;
+  float: none;
+}
+
+.model-viewer-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: #1c1d1f 0px 0px 5px 0px;
+}
+.model-viewer-container model-viewer {
+  width: 75vw;
+  height: 50vh;
+}
+.model-viewer-container h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+#activateISS {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+#activateISS a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Roboto", sans-serif;
+}
+
+#activateISS a:before,
+#activateISS a:after {
+  position: absolute;
+  content: "3D МКС";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#activateISS a:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+#activateISS a:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+#activateISS a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
 }
 
 /*# sourceMappingURL=main.css.map */
