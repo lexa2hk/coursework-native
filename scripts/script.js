@@ -10,7 +10,7 @@ for (let i = 0; i < bg.length; i++){
 
 function goTo(href){
     window.location.href =  href;
-}
+}Ы
 
 
 function animateRocket(){
