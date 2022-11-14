@@ -19,46 +19,52 @@
     <title>GANGRATUA</title>
   </head>
   <body>
-  <header>
-    <nav>
-      <div class="nav-container" id="top-navbar">
-        <div class="logo">
-          <a href="index.html">GANGRATUA SPACE</a>
-        </div>
-        <div class="nav-links">
-          <ul>
-            <li>
-              <a href="index.html#main-text">Исследовать</a>
-            </li>
-            <li>
-              <a href="index.html#introduction-wrapper">Главная</a>
-            </li>
-            <li>
-              <a href="about.html">О нас</a>
-            </li>
-          </ul>
-        </div>
-        <div class="burger-menu">
-          <input type="checkbox" id="toggle" />
-          <label for="toggle" class="burger">
-            <div class="top"></div>
-            <div class="mid"></div>
-            <div class="bot"></div>
-          </label>
-          <div class="burger-nav">
-            <div class="burger-nav-wrapper">
-              <nav class="burger-nav-div">
-                <a href="index.html#main-text" onclick="uncheckBurger()">Исследовать</a>
-                <a href="index.html#introduction-wrapper" onclick="uncheckBurger()">Главная</a>
-                <a href="about.html" onclick="uncheckBurger()">О нас</a>
-              </nav>
+    <header>
+      <nav>
+        <div class="nav-container" id="top-navbar">
+          <div class="logo">
+            <a href="index.html">GANGRATUA SPACE</a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="index.html#main-text">Исследовать</a>
+              </li>
+              <li>
+                <a href="index.html#introduction-wrapper">Главная</a>
+              </li>
+              <li>
+                <a href="about.html">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <div class="burger-menu">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="burger">
+              <div class="top"></div>
+              <div class="mid"></div>
+              <div class="bot"></div>
+            </label>
+            <div class="burger-nav">
+              <div class="burger-nav-wrapper">
+                <nav class="burger-nav-div">
+                  <a href="index.html#main-text" onclick="uncheckBurger()"
+                    >Исследовать</a
+                  >
+                  <a
+                    href="index.html#introduction-wrapper"
+                    onclick="uncheckBurger()"
+                    >Главная</a
+                  >
+                  <a href="about.html" onclick="uncheckBurger()">О нас</a>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="nav-line"></div>
-    </nav>
-  </header>
+        <div class="nav-line"></div>
+      </nav>
+    </header>
 
     <main class="Main">
       <section>
@@ -96,15 +102,18 @@
                </li>
              </ul>
          </div> -->
-        
-          <div class="el-par mouse-parallax-bg" onclick="goTo('mars.html')">
-            <img src="images/mars.png" alt="" style="width: 200px"/>
-  
-            <div class="moon-text"><a>Марсианские аппараты</a></div>
-          </div>
-        
 
-        <div id="voyager-par" class="el-par mouse-parallax-bg" onclick="goTo('deepSpace.html')">
+        <div class="el-par mouse-parallax-bg" onclick="goTo('mars.html')">
+          <img src="images/mars.png" alt="" style="width: 200px" />
+
+          <div class="moon-text"><a>Марсианские аппараты</a></div>
+        </div>
+
+        <div
+          id="voyager-par"
+          class="el-par mouse-parallax-bg"
+          onclick="goTo('deepSpace.html')"
+        >
           <img src="images/VoyagerBg.png" alt="" />
 
           <div class="moon-text"><p>Далекий космос</p></div>
@@ -198,7 +207,7 @@
           <h2>Международная космическая станция</h2>
           <p>
             Пилотируемая орбитальная станция, используемая как многоцелевой
-            космический исследовательский комплекс. 
+            космический исследовательский комплекс.
           </p>
           <a href="near-earth.html#iss-article">
             <button class="SpaceBtn">Подробнее</button>
@@ -223,8 +232,8 @@
           <h3>Первые на красном</h3>
           <h2>Программа "Марс"</h2>
           <p>
-            Советские учение впервые достигли красной планеты. 
-            8 экспедиций, но ни одной успешной.
+            Советские учение впервые достигли красной планеты. 8 экспедиций, но
+            ни одной успешной. Крах или победа исследователей?
           </p>
           <a href="mars.html">
             <button class="SpaceBtn">Подробнее</button>
@@ -236,10 +245,36 @@
           <h3>Навеки одни</h3>
           <h2>Удаленные космические зонды</h2>
           <p>
-            Пять аппаратов, которые сами по себе являются историей.
-            Voyager 1 и 2, New Horizons, Pioner 10 и 11 - на пути в бесконечность.
+            Пять аппаратов, которые сами по себе являются историей. Voyager 1 и
+            2, New Horizons, Pioner 10 и 11 - на пути в бесконечность.
           </p>
           <a href="deepSpace.html">
+            <button class="SpaceBtn">Подробнее</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img src="images/ParkerShield.jpeg" alt="Avatar" />
+          <h3>Изучение полюсов</h3>
+          <h2>Parker Solar Probe</h2>
+          <p>
+            Постоенный для изучения Солнца, аппарат достиг своей орбиты и
+            постепенно приближается, вынуждаясь сгореть.
+          </p>
+          <a href="solarObjects.html">
+            <button class="SpaceBtn">Подробнее</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img src="images/SolarOrbiter.jpg" alt="Avatar" />
+          <h3>Ближайшее изучение Солнца</h3>
+          <h2>Solar Orbiter</h2>
+          <p>
+            Аппарат, созданный NASA, который впервые позволил нам увидеть Солнце
+            с близкого расстояния и изучить частицы, которые оно высвобождает.
+          </p>
+          <a href="solarObjects.html">
             <button class="SpaceBtn">Подробнее</button>
           </a>
         </div>

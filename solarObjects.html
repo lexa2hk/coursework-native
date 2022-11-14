@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/23dd47c5b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <title>Солнечные зонды</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container" id="top-navbar">
+          <div class="logo">
+            <a href="index.html">GANGRATUA SPACE</a>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="index.html#main-text">Исследовать</a>
+              </li>
+              <li>
+                <a href="index.html#introduction-wrapper">Главная</a>
+              </li>
+              <li>
+                <a href="about.html">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <div class="burger-menu">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="burger">
+              <div class="top"></div>
+              <div class="mid"></div>
+              <div class="bot"></div>
+            </label>
+            <div class="burger-nav">
+              <div class="burger-nav-wrapper">
+                <nav class="burger-nav-div">
+                  <a href="index.html#main-text">Исследовать</a>
+                  <a href="index.html#introduction-wrapper">Главная</a>
+                  <a href="about.html">О нас</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-line"></div>
+      </nav>
+    </header>
+
+    <main class="Main solar">
+      <div class="marsArticleText">
+        <h1>Солнечные аппараты</h1>
+        <p>
+          Если посмотреть на Солнце в обычный телескоп, а затем проецировать
+          изображение с него на экран (с помощью солнечного фильтра) или
+          картинку из окна оптического прибора и вывести его через световой
+          канал, то мы увидим фотосферу — поверхность Солнца неправильной формы.
+          Гранулы образуются при конвекционном перемешивании материи солнца,
+          диаметр их может достигать нескольких тысяч километров. Однако
+          <a
+            href="https://solarsystem.nasa.gov/solar-system/sun/overview/"
+            style="color: white"
+            >строение солнца</a
+          >
+          намного сложнее, чем кажется на первый взгляд. Именно поэтому ученые
+          озадачены построением солнечных аппаратов, которые позволят
+          максимально приблизиться к объекту и собрать нужную информацию.
+        </p>
+      </div>
+
+      <div class="voyager-model center-container">
+        <div class="model-viewer-container center-item">
+          <model-viewer
+            alt="123"
+            src="models/Sun.glb"
+            background-color="#252525"
+            shadow-intensity="1"
+            camera-controls
+            touch-action="pan-y"
+            shadow-intensity="1"
+            shadow-softness="0"
+            auto-rotate
+          >
+            <h2 id="sun3dText" style="text-align: center">SÓL</h2>
+          </model-viewer>
+        </div>
+      </div>
+
+      <section class="article-sect article-sect--deep">
+        <h1 style="color: #000000">Parker Solar probe</h1>
+
+        <p style="text-indent: 15px">
+          Историческая миссия НАСА Parker Solar Probe революционизирует наше
+          понимание Солнца, где изменяющиеся условия могут распространяться по
+          всей Солнечной системе, влияя на Землю и другие миры. Солнечный зонд
+          Parker проходит через атмосферу Солнца, ближе к поверхности, чем любой
+          космический аппарат до него, сталкиваясь с жестокими условиями жары и
+          радиации, чтобы предоставить человечеству самые близкие наблюдения
+          звезды за всю историю.
+        </p>
+        <p style="text-indent: 15px">
+          Космический корабль Parker Solar Probe проходит испытания в опасной
+          зоне интенсивной жары и солнечно-тепловой радиации. Для проведения
+          этих беспрецедентных исследований космический аппарат защищен от
+          солнечного тепла экраном из углеродного композита толщиной 11,43 см,
+          который должен выдерживать температуру за пределами космического
+          аппарата почти 1377 градусам Цельсия.
+        </p>
+        <p style="text-indent: 15px">
+          Космический аппарат вращается с периодом 88 дней вокруг Солнца,
+          максимально приближаясь к поверхности звезды. Это позволяет аппарату
+          провести необходимые исследования. Затем аппарат отдалется от солнца,
+          чтобы избежать перегрева и сохранить нужную орбиту.
+        </p>
+        <br />
+
+        <div class="voyager-model center-container">
+          <div class="model-viewer-container center-item">
+            <model-viewer
+              alt="3Д модель Parker Solar Probe, созданная NASA"
+              src="models/PSP.glb"
+              background-color="#EBEBEB"
+              shadow-intensity="1"
+              camera-controls
+              touch-action="pan-y"
+              shadow-intensity="1"
+              shadow-softness="0"
+              auto-rotate
+            >
+              <h2 style="text-align: center">3D модель Parker Solar Probe</h2>
+            </model-viewer>
+          </div>
+        </div>
+
+        <h3>Прогнозы длительности</h3>
+        <p>
+          Длительность жизни зонда Parker напрямую зависит от его положения в
+          пространстве. он вынужден всегда быть повернутым к Солнцу, чтобы
+          избежать нежелательного перегрева.
+        </p>
+
+        <div class="center-container">
+          <img
+            src="images/ParkerOrbite.jpeg"
+            alt=""
+            class="article-image no-float-center"
+            onclick="imageFullScreen(this)"
+          />
+          <p>Орбита Parker Solar Probe</p>
+        </div>
+
+        <p>
+          Если гироскоп или другие системы управления не смогут поддерживать положение
+            аппарата, то он развернется, мгновенно перегреется и выйдет из строя,
+          оставаясь во вращении вокруг светила еще долгое время.
+        </p>
+        <div class="center-container">
+          <img
+                  src="images/ParkerShield.jpeg"
+                  alt=""
+                  class="article-image no-float-center"
+                  onclick="imageFullScreen(this)"
+          />
+          <p>Щит Parker Solar probe</p>
+        </div>
+
+      </section>
+
+      <section class="article-sect article-sect--deep" style="margin-bottom: 0">
+        <h1 style="color: black">Solar Orbiter</h1>
+
+        <p>
+          Solar Orbiter был выведен на эллиптическую орбиту вокруг Солнца,
+          удаляясь от звезды каждые пять месяцев и достигая этой высоты за три
+          года. Наклонная орбита позволила Solar Orbiter проводить измерения
+          плазмы солнечного ветра, волн и энергичных частиц в непосредственной
+          близости к Солнцу (около 65 миллионов миль), что позволяет исследовать
+          области около полюсов солнца. 27 декабря 2020 года Solar Orbiter
+          завершил первый облет Венеры. К концу 2021 году все приборы будут
+          работать вместе, готовясь к сближению со Солнцем на расстояние 48
+          миллионов километров (около 30 млн км ближе чем в прошлом).
+        </p>
+        <div class="center-container">
+          <img
+            src="images/SolarOrbiter.jpg"
+            alt=""
+            class="article-image no-float-center"
+            onclick="imageFullScreen(this)"
+          />
+          <p>Рендер Solar Orbiter от NASA</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="about-us">
+          <h3>О нас</h3>
+          <p>
+            GANGRATUA SPACE - нескучный космический журнал о летательных
+            аппаратах
+          </p>
+        </div>
+        <div class="links">
+          <h3>Ссылки</h3>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <br />
+            <li><a href="mars.html">Марсианские аппараты</a></li>
+            <br />
+            <li><a href="near-earth.html">Околоземные аппараты</a></li>
+            <br />
+            <li><a href="deepSpace.html">Далекий космос</a></li>
+            <br />
+            <li><a href="about.html">О нас</a></li>
+            <br />
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Контакты</h3>
+          <p>Автор: Смольников Алексей Борисович</p>
+          <p><strong>ИКБО-10-21</strong>, курсовая работа</p>
+          <p>
+            <i class="fa-brands fa-telegram"></i>
+            <a href="https://t.me/lexa2hk" class="tg-link">lexa2hk</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
